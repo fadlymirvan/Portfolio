@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .center-btn-item {
@@ -10,8 +11,7 @@
 }
 
 .wrapping {
-    padding: 50px 100px 50px 100px;
-    margin: 75px 120px 0 120px;
+    padding: 5% 10% 5% 10%;
 }
 
 .mid-wrapping {
@@ -60,11 +60,12 @@ header {
     right: 0;
     z-index: 1500;
 }
+
 nav {
     height: 80px;
+    width: 100%;
     background-color: #1E3678;
     display: flex;
-    justify-content: space-between;
     top: 0;
     padding-left: 200px;
     padding-right: 150px;
@@ -72,6 +73,7 @@ nav {
     position: relative;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
 }
 
 nav ul {
@@ -88,6 +90,7 @@ nav li {
     flex-wrap: wrap;
     margin-bottom: 0;
     list-style: none;
+    float: left;
 }
 
 nav a {
@@ -102,18 +105,21 @@ nav a:hover {
     font-weight: bolder;
 }
 
-/*  Burger Menu */
-
-
 /*  Main */
 main {
     background-color: #FFFFFF;
+}
+
+.topPicture {
+    position: relative;
+    display: inline-block;
 }
 
 .textTopPict {
     position: absolute;
     top: 35%;
     left: 15%;
+    z-index: 999;
 }
 
 .textTopPict h2 {
@@ -172,12 +178,17 @@ main {
 }
 
 #aboutDesc2 {
-    font-size: 19px;
+    padding-top: 5px;
+    font-size: 30px;
+    text-align: center;
 }
 
 #aboutDesc2 li {
     display: inline-block;
-    margin-right: 150px;
+}
+
+.textAB2 p {
+    margin-top: 20px;
 }
 
 table {
@@ -188,11 +199,6 @@ th, td {
     font-size: 23px;
     width: 150px;
     padding: 10px;
-}
-
-.info-data {
-    margin-top: 30px;
-    margin-left: 30px;
 }
 
 .logoSkills {
@@ -209,7 +215,6 @@ th, td {
     border-radius: 10px;
     margin: 10px 10px;
     padding: 15px;
-    display: inline-block;
     border: solid #CCDEE3;
     flex-grow: 1;
 }
@@ -225,6 +230,7 @@ th, td {
 .card-hover:hover {
     box-shadow: 0.5rem 0.5rem 0.5rem rgba(00, 06, 51, 0.3);
     font-weight: bolder;
+    transition-duration: 0.5s;
 }
 
 #portfolio {
@@ -312,16 +318,22 @@ th, td {
     color: blue;
 }
 
+#blog-desc {
+    text-align: center;
+    font-size: 23px;
+    margin: 10px 10px;
+}
+
 .myblog-post {
     margin: 2px;
 }
 
 .image-blog {
-    padding: 10px;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    position: relative;
+    margin-bottom: 20px;
+    object-fit: cover;
 }
 
 #contact {
@@ -342,7 +354,7 @@ th, td {
 
 .contact-1 {
     flex-grow: 1;
-    padding: 10px;
+    padding-right: 20px;
     justify-content: center;
 }
 
@@ -395,6 +407,43 @@ textarea {
     color: cornflowerblue;
 }
 
+#fullBio {
+    display: flex;
+}
+
+.bio-wrapping {
+    display: flex;
+}
+
+aside h2 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+aside p {
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 23px;
+}
+
+.bio-div2 {
+    flex-grow: 1;
+    padding-right: 20px;
+}
+
+#profile-card {
+    background-color: white;
+    width: 50%;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 15px;
+    border: solid black;
+    flex-grow: 1;
+    text-align: center;
+}
+
 /*  Footer */
 footer {
     padding: 20px;
@@ -402,7 +451,4 @@ footer {
     background-color: #1E3678;
     text-align: center;
     font-weight: bold;
-}
-
-@media screen and (max-width: 500px) {
 }
