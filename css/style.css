@@ -45,65 +45,15 @@ header {
     background-color: #282D42;
     width: 100%;
     display: inline;
-}
-
-/*  Navbar*/
-.icon {
-    justify-content: flex-start;
-    color: white;
-    display: inline-block;
-}
-
-.navWrap {
     position: fixed;
     left: 0;
     right: 0;
-    z-index: 1500;
-}
-
-nav {
-    height: 80px;
-    width: 100%;
-    background-color: #1E3678;
-    display: flex;
-    top: 0;
-    padding-left: 200px;
-    padding-right: 150px;
+    z-index: 2000;
     box-shadow: 0 0.5rem 1rem rgba(00, 06, 51, 0.3);
-    position: relative;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
 }
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+  /*Navbar*/
 
-nav li {
-    display: inline-block;
-    font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 0;
-    list-style: none;
-    float: left;
-}
-
-nav a {
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 15px 20px;
-}
-
-nav a:hover {
-    font-weight: bolder;
-}
 
 /*  Main */
 main {
@@ -136,7 +86,7 @@ main {
 
 .textTopPict p {
     color: #CA6AEB;
-    font-size: 23px;
+    font-size: 28px;
 }
 
 .topBg {
@@ -150,6 +100,7 @@ main {
 
 #content p {
     color: #707070;
+    font-size: 23px;
 }
 
 #content h2 {
@@ -167,7 +118,7 @@ main {
 #about h3 {
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 23px;
+    font-size: 32px;
 }
 
 #aboutDesc {
@@ -217,6 +168,7 @@ th, td {
     padding: 15px;
     border: solid #CCDEE3;
     flex-grow: 1;
+    word-wrap: break-word;
 }
 
 .card h3 {
@@ -451,4 +403,67 @@ footer {
     background-color: #1E3678;
     text-align: center;
     font-weight: bold;
+}
+
+nav {
+    border-bottom: 1px solid #1E3678;
+    text-align: right;
+    width: 100%;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.menu {
+    padding: 20px;
+}
+
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+    line-height: 70px;
+    font-size: 32px;
+}
+
+.menu a:hover {
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.headerLabel {
+    margin: 0 40px 0 0;
+    font-size: 100px;
+    color: white;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+    transform: scale(0.9, 0.7);
+    padding: 10px;
+}
+
+#toggle {
+    display: none;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .headerLabel {
+        display: block;
+        cursor: pointer;
+    }
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #EAEAEB;
+        margin: 0;
+    }
+    #toggle:checked + .menu {
+        display: block;
+    }
 }
